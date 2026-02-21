@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vibe Coding Landing (Iframe Auto Height)</title>
+  <style>
+    html, body { margin: 0; padding: 0; background: #fff; }
+    .frame-wrap { width: 100%; max-width: 1280px; margin: 0 auto; }
+    iframe { width: 100%; border: 0; display: block; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div class="frame-wrap">
+    <iframe id="landingFrame" src="./vibe-coding-desktop-dd8da337-autoheight.html" scrolling="no"></iframe>
+  </div>
+  <script>
+    (function () {
+      var frame = document.getElementById('landingFrame');
+      window.addEventListener('message', function (e) {
+        if (!e || !e.data || e.data.type !== 'landing-height') return;
+        if (!frame) return;
+        var h = Number(e.data.height);
+        if (!Number.isFinite(h) || h <= 0) return;
+        frame.style.height = h + 'px';
+      });
+    })();
+  </script>
+</body>
+</html>
