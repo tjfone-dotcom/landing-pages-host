@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 공인 AI 전문 인증서 오프라인 워크숍</title>
+    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        google: {
+                            blue: '#4285F4',
+                            red: '#EA4335',
+                            yellow: '#FBBC05',
+                            green: '#34A853',
+                        },
+                        brand: {
+                            dark: '#0f172a',    // slate-900
+                            light: '#f8fafc',   // slate-50
+                            accent: '#2563eb',  // blue-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; overflow-x: hidden; }
+        /* 섹션 경계를 넘어가는 장식용 블러 효과 */
+        .blob { position: absolute; filter: blur(80px); opacity: 0.4; z-index: 0; border-radius: 50%; pointer-events: none; }
+    </style>
+</head>
+<body class="bg-brand-dark antialiased">
+
+    <section class="w-full flex items-center justify-center bg-brand-dark relative overflow-visible">
+        <div class="blob bg-google-blue w-[400px] h-[400px] -top-20 -left-20"></div>
+        <div class="blob bg-google-red w-[300px] h-[300px] bottom-0 right-10"></div>
+        
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col justify-center items-center text-center relative z-10">
+            <span data-aos="fade-down" class="px-4 py-1.5 rounded-full bg-slate-800 text-google-blue text-sm font-bold tracking-wide mb-6 inline-block shadow-lg border border-slate-700">Google AI Professional Certificate</span>
+            <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                챗GPT 질문창에 멈춰 있는 우리 팀,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-google-blue to-teal-400">단 하루 만에 'AI 워킹그룹'으로 진화합니다.</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-lg lg:text-xl text-slate-300 mb-10 max-w-2xl break-keep">
+                온라인 강의의 한계를 뛰어넘는 소수 정예 밀착 코칭. <br class="hidden lg:block">우리 회사의 AI 활용 역량을 실무 적용 수준으로 완벽하게 끌어올리세요.
+            </p>
+            <a href="#consulting-form" data-aos="zoom-in" data-aos-delay="300" class="group relative px-8 py-4 bg-google-blue text-white text-lg font-bold rounded-xl overflow-hidden shadow-[0_0_40px_rgba(66,133,244,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(66,133,244,0.6)]">
+                <span class="relative z-10">도입 상담 신청하기</span>
+                <div class="absolute inset-0 h-full w-full bg-white/20 scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-300 ease-out"></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="w-full flex items-center justify-center bg-brand-light relative">
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col lg:flex-row justify-between items-center relative z-10 gap-12">
+            <div class="w-full lg:w-1/2" data-aos="fade-right">
+                <h2 class="text-3xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                    지금 우리 회사의<br>
+                    <span class="text-brand-accent">AI 현주소</span>는 어디인가요?
+                </h2>
+                <p class="text-lg text-slate-600 mb-8 break-keep">
+                    빠르게 도입하는 것보다 중요한 것은 <strong>'제대로 활용하여 성과를 내는 것'</strong>입니다. 이제 단순한 호기심을 넘어, 실질적인 비즈니스 임팩트를 만들어야 할 때입니다.
+                </p>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                <div data-aos="fade-left" data-aos-delay="100" class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex items-start gap-4">
+                    <div class="text-3xl">🤔</div>
+                    <p class="text-slate-800 text-lg font-medium leading-relaxed">"챗GPT 결제는 했는데, 단순한 질문이나 번역기로만 쓰고 있어요."</p>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200" class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex items-start gap-4">
+                    <div class="text-3xl">🧱</div>
+                    <p class="text-slate-800 text-lg font-medium leading-relaxed">"AI가 좋다는 건 아는데, 막상 내 업무에 뭘 어떻게 적용해야 할지 막막합니다."</p>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="300" class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex items-start gap-4">
+                    <div class="text-3xl">🌪️</div>
+                    <p class="text-slate-800 text-lg font-medium leading-relaxed">"직원들의 AI 활용 수준이 제각각이라, 오히려 워크플로우가 꼬이고 있습니다."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full flex items-center justify-center bg-white relative">
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col justify-center items-center relative z-10">
+            <h2 data-aos="fade-up" class="text-3xl lg:text-5xl font-bold text-slate-900 mb-4 text-center">워크숍 이후, <span class="text-google-green">일하는 방식</span>이 완전히 달라집니다.</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-slate-600 mb-16 text-center">단 하루의 몰입으로 만들어내는 압도적인 Before & After</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                <div data-aos="zoom-in" data-aos-delay="100" class="bg-slate-50 rounded-3xl p-8 hover:bg-google-green/5 transition-colors duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl mb-6">🚀</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">초보자에서 AI 마스터로</h3>
+                    <p class="text-slate-600 leading-relaxed break-keep">단순 질문을 넘어 분야별 최신 AI 서비스를 이해하고, 비전공자도 전문가 수준의 결과물을 빠르게 도출합니다.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="bg-slate-50 rounded-3xl p-8 hover:bg-google-blue/5 transition-colors duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl mb-6">⚡</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">압도적인 업무 효율화</h3>
+                    <p class="text-slate-600 leading-relaxed break-keep">단순 반복 업무를 자동화하고, 디자인·데이터 분석 등 비전문 분야의 업무 품질을 획기적으로 향상시킵니다.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="bg-slate-50 rounded-3xl p-8 hover:bg-google-yellow/5 transition-colors duration-300">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl mb-6">🌐</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">조직 전체 생산성 혁신</h3>
+                    <p class="text-slate-600 leading-relaxed break-keep">개인의 책상을 넘어, 부서 간 워크플로우를 최적화하고 하나 된 기준의 AI 활용 생태계를 구축합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full flex items-center justify-center bg-[#0B1120] relative overflow-visible">
+        <div class="blob bg-brand-accent w-[500px] h-[500px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col lg:flex-row justify-center items-center relative z-10 gap-12">
+            <div data-aos="fade-right" class="w-full lg:w-5/12 text-white">
+                <h2 class="text-3xl lg:text-5xl font-bold leading-tight mb-4">
+                    철저하게 <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-google-blue">'실무 성과'</span>에 집중하는<br>
+                    검증된 AI 마스터
+                </h2>
+                <p class="text-slate-300 text-lg mb-8">
+                    이론만 늘어놓는 강의가 아닙니다. 10년 이상의 기업 워크숍 노하우와 실제 AI 프로젝트 수행 경험을 바탕으로 가장 실전적인 인사이트를 전수합니다.
+                </p>
+            </div>
+            <div data-aos="fade-left" class="w-full lg:w-7/12">
+                <ul class="space-y-4">
+                    <li class="bg-slate-800/60 backdrop-blur-md p-5 rounded-xl border border-slate-700 flex items-center gap-4 text-white text-lg">
+                        <span class="text-google-yellow text-2xl">🏆</span> Google AI Professional Certificate 보유
+                    </li>
+                    <li class="bg-slate-800/60 backdrop-blur-md p-5 rounded-xl border border-slate-700 flex items-center gap-4 text-white text-lg">
+                        <span class="text-brand-accent text-2xl">🎓</span> 서울대학교 경영대학원 마케팅 전공 석사
+                    </li>
+                    <li class="bg-slate-800/60 backdrop-blur-md p-5 rounded-xl border border-slate-700 flex items-center gap-4 text-white text-lg">
+                        <span class="text-google-green text-2xl">💼</span> 실무 중심 기업 워크숍 강의 경력 10년 이상
+                    </li>
+                    <li class="bg-slate-800/60 backdrop-blur-md p-5 rounded-xl border border-slate-700 flex items-center gap-4 text-white text-lg">
+                        <span class="text-google-red text-2xl">📊</span> AI 활용 프로젝트 총괄 (도급액 1억 이상 성공적 수행)
+                    </li>
+                    <li class="bg-slate-800/60 backdrop-blur-md p-5 rounded-xl border border-slate-700 flex items-center gap-4 text-white text-lg">
+                        <span class="text-teal-400 text-2xl">🥇</span> 한국데이터산업진흥원 빅데이터 분석 전문가 과정 최우수 수료
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full flex items-center justify-center bg-brand-light relative">
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col justify-center items-center relative z-10">
+            <h2 data-aos="fade-up" class="text-3xl lg:text-5xl font-bold text-slate-900 mb-4 text-center">팀의 여건에 맞춘 <span class="text-brand-accent">최적의 과정</span>을 선택하세요.</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-slate-600 mb-12 text-center">구글 전문가가 설계한 7개 핵심 모듈. 코딩 없이(Vibe Coding) 앱까지 만듭니다.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+                <div data-aos="fade-right" data-aos-delay="200" class="bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border-2 border-transparent hover:border-google-blue transition-all">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 font-bold rounded-full text-sm mb-3 inline-block">Option A</span>
+                            <h3 class="text-2xl font-bold text-slate-900">1-Day 베이직 워크숍 (6시간)</h3>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-slate-400 line-through">1,500,000원</p>
+                            <p class="text-2xl font-bold text-brand-accent">1,000,000원<span class="text-sm text-slate-500 font-normal"> /팀</span></p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-6 font-medium">단 하루, 핵심 기획 역량을 빠르게 마스터하고 자율 학습의 뼈대를 세웁니다.</p>
+                    <ul class="space-y-3 text-slate-700 mb-8">
+                        <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span> 핵심 3개 모듈 밀착 코칭 + 4개 모듈 자율 학습</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span> 모듈 1: AI Fundamentals (AI 기초)</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span> 모듈 2: Brainstorming & Planning (기획)</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span> 모듈 3: Research & Insights (리서치)</li>
+                    </ul>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-delay="300" class="bg-gradient-to-br from-blue-600 to-blue-900 rounded-3xl p-8 shadow-[0_20px_40px_rgba(37,99,235,0.2)] text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-google-yellow text-slate-900 text-xs font-bold px-4 py-1 rounded-bl-xl z-10">BEST CHOICE</div>
+                    <div class="flex justify-between items-start mb-6 relative z-10">
+                        <div>
+                            <span class="px-3 py-1 bg-blue-500 text-white font-bold rounded-full text-sm mb-3 inline-block">Option B</span>
+                            <h3 class="text-2xl font-bold">2-Day 마스터 워크숍 (12시간)</h3>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-blue-300 line-through">2,500,000원</p>
+                            <p class="text-2xl font-bold text-google-yellow">1,800,000원<span class="text-sm text-blue-200 font-normal"> /팀</span></p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100 mb-6 font-medium relative z-10">데이터 분석부터 맞춤형 앱 제작까지 실무 적용을 완벽하게 끝냅니다.</p>
+                    <ul class="space-y-3 text-blue-50 relative z-10">
+                        <li class="flex items-start gap-2"><span class="text-google-yellow font-bold">✓</span> 7개 전체 모듈 실습 및 밀착 코칭 완주</li>
+                        <li class="flex items-start gap-2"><span class="text-google-yellow font-bold">✓</span> <span class="text-blue-200">1-Day 과정 포함 + 아래 심화 모듈</span></li>
+                        <li class="flex items-start gap-2"><span class="text-google-yellow font-bold">✓</span> 글쓰기와 커뮤니케이션 / 콘텐츠 제작</li>
+                        <li class="flex items-start gap-2"><span class="text-google-yellow font-bold">✓</span> 데이터 분석 / 맞춤형 AI 앱 빌딩</li>
+                    </ul>
+                </div>
+            </div>
+            <p data-aos="fade-up" data-aos-delay="400" class="mt-6 text-sm text-slate-500">※ 전국 방문 출강 진행 (최대 10명 기준) / 강의장 대여 필요 시 대여비 별도</p>
+        </div>
+    </section>
+
+    <section class="w-full flex items-center justify-center bg-white relative">
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col justify-center items-center relative z-10">
+            <h2 data-aos="fade-up" class="text-3xl lg:text-5xl font-bold text-slate-900 mb-12 text-center">완주를 돕는 밀착 코칭과 <span class="text-google-red">강력한 혜택</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
+                <div data-aos="fade-up" data-aos-delay="100" class="flex items-center gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-3xl shrink-0">📜</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">구글 공인 AI 전문 인증서 획득</h4>
+                        <p class="text-sm text-slate-600">링크드인 프로필 및 이력서에 공식 자격으로 연동 가능</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="flex items-center gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-3xl shrink-0">💡</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">실무 템플릿 & 부가 자료집 제공</h4>
+                        <p class="text-sm text-slate-600">즉시 투입 가능한 프롬프트 세트 및 최신 서비스 리스트</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="flex items-center gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-16 h-16 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center text-3xl shrink-0">💸</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Coursera 수강료 무료 환급 가이드</h4>
+                        <p class="text-sm text-slate-600">수강 후 7일 이내 환불 정책을 활용한 100% 무료 수료 팁</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400" class="flex items-center gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-3xl shrink-0">✨</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Google AI Pro 3개월 무료</h4>
+                        <p class="text-sm text-slate-600">최상위 AI 모델을 워크숍 이후에도 충분히 실습 (정책에 따름)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full flex items-center justify-center bg-brand-dark relative overflow-hidden">
+        <div class="blob bg-brand-accent w-[600px] h-[600px] -bottom-40 -right-20"></div>
+        
+        <div class="w-full max-w-[1280px] lg:h-[720px] px-6 py-20 lg:py-0 flex flex-col justify-center relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 h-full items-center">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-white mb-8">자주 묻는 질문 (FAQ)</h2>
+                    <div class="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                        <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                            <h4 class="text-white font-bold mb-2">Q. 코딩 지식이 없는 문과생도 참여할 수 있나요?</h4>
+                            <p class="text-slate-400 text-sm">네, 완벽히 가능합니다. 코딩 없이 일상 언어로 AI를 다루고 앱을 만드는(Vibe Coding) 방법에 집중합니다.</p>
+                        </div>
+                        <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                            <h4 class="text-white font-bold mb-2">Q. 장소와 준비물은 무엇인가요?</h4>
+                            <p class="text-slate-400 text-sm">전국 사내/외 교육장으로 출강합니다. 대형 스크린, 방화벽 없는 Wi-Fi, 개인 노트북, 해외 결제용 카드(가입용)가 필요합니다.</p>
+                        </div>
+                        <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                            <h4 class="text-white font-bold mb-2">Q. 10명이 넘는 인원은 어떻게 하나요?</h4>
+                            <p class="text-slate-400 text-sm">밀착 코칭을 위해 1회 10명으로 제한하며, 인원이 많을 경우 기수를 나누어 진행합니다. 일정/비용 조율이 가능합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left" data-aos="fade-left" data-aos-delay="200">
+                    <h2 class="text-3xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                        우리 팀의 멈춰있던 생산성,<br>
+                        이제 <span class="text-transparent bg-clip-text bg-gradient-to-r from-google-blue to-teal-400">AI로 폭발시킬 시간</span>입니다.
+                    </h2>
+                    <p class="text-lg text-slate-300 mb-10 break-keep">
+                        일정, 비용, 커리큘럼 등 궁금한 점이 있으시다면 지금 바로 상담을 신청해 주세요. 담당 코치가 직접 기업의 상황에 맞는 최적의 교육 플랜을 제안해 드립니다.
+                    </p>
+                    <a href="#consulting-form" id="consulting-form" class="inline-flex justify-center items-center px-8 py-5 bg-gradient-to-r from-google-blue to-blue-600 text-white text-xl font-bold rounded-2xl shadow-[0_10px_30px_rgba(66,133,244,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(66,133,244,0.5)]">
+                        우리 회사 맞춤 도입 상담 신청하기 ➔
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // 애니메이션 지속 시간 (ms)
+            once: true,    // 스크롤 할 때 한 번만 실행
+            offset: 100    // 트리거 지점 오프셋
+        });
+    </script>
+</body>
+</html>
