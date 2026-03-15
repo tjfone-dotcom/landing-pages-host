@@ -1,0 +1,79 @@
+# Design DNA: Vibe Coding Landing Page
+
+## 1. Design Philosophy
+* **Minimal & Professional:** 여백을 충분히 활용하여 시각적 피로도를 낮추고 전문성을 강조합니다.
+* **Dynamic but Subtle:** 과도한 애니메이션은 지양하되, 스크롤과 마우스 호버 시 부드러운 인터랙션으로 생동감을 줍니다.
+* **Mobile-First Adaptability:** 데스크톱에서는 시원한 와이드 뷰(16:9 비율)를 제공하고, 모바일에서는 유연한 세로형 스크롤에 최적화합니다.
+
+## 2. Color Palette
+주조색은 신뢰감을 주는 블루 계열이며, 배경은 완전한 흰색이 아닌 눈이 편안한 미세한 톤을 사용합니다.
+* **Primary (Brand Color):** `#2b7cee` (Blue)
+* **Background Base:** `#E8EEE3` (Light Greenish-Gray / 웜톤 오프화이트)
+* **Surface:** `#FFFFFF` (카드 및 주요 콘텐츠 영역 배경)
+* **Text Primary:** `#1a1a1a` (가독성 높은 다크 그레이/블랙)
+* **Text Secondary:** `rgba(26, 26, 26, 0.6)` (보조 텍스트 및 부연 설명)
+* **Cool Grays:** `#F8FAFC`, `#F1F5F9`, `#E2E8F0` (구분선, 비활성 요소, 카드 보조 배경)
+
+## 3. Typography
+텍스트의 종류에 따라 두 가지 폰트를 혼용하여 가독성과 심미성을 동시에 잡습니다.
+* **Body & Heading (Korean):** `Noto Sans KR` (sans-serif)
+* **Numbers & English Highlights:** `Inter` (sans-serif) -> `font-num` 클래스로 활용
+* **Line Height (행간):** `1.62` (가독성을 위한 넉넉한 세로 여백)
+* **Letter Spacing (자간):** * 본문: `-0.005em`
+    * 제목(h1~h4): `-0.015em` (제목은 자간을 좁혀 단단한 느낌 부여)
+* **Font Weights:** Regular(400), Medium(500), Bold(700), Black(900)
+
+## 4. Layout & Spacing
+* **Container:** 최대 너비 `max-w-[1280px]` 중앙 정렬 (`mx-auto`).
+* **Desktop Section:** `md:aspect-[16/9]`를 사용하여 화면을 가득 채우는 시원한 비율 유지.
+* **Mobile Section:** `py-24`로 상하 여백을 충분히 주어 유동적인 높이(`min-h-0`) 허용.
+* **Grid System:** 데스크톱에서는 `grid-cols-2` 또는 `grid-cols-3`를 주로 사용하고, 모바일에서는 반드시 `grid-cols-1`로 스택(Stack) 배치.
+* **Padding:** 카드 및 섹션 내부 여백은 넉넉하게(`p-8`, `p-12`, `p-20`) 설정.
+
+## 5. UI Components
+* **Border Radius:** 통일감 있는 둥근 모서리 적용. 기본적으로 `rounded-2xl` 또는 `rounded-xl` 사용.
+* **Borders:** 눈에 띄는 굵은 선보다는 `border-black/5` 등 투명도가 들어간 아주 미세한 테두리로 영역 구분.
+* **Shadows:** * 기본 상태: `shadow-sm` 또는 `shadow-md`
+    * 호버/강조 상태: `shadow-xl`, `shadow-2xl`
+    * 특별 강조(인기 코스 등): 브랜드 컬러 섀도우 `shadow-primary/40` 및 `ring-4 ring-primary/20`
+* **Buttons:** 텍스트 크기 대비 패딩을 두껍게(`px-10 py-5`) 설정하여 클릭 타겟을 넓히고 볼드체(`font-bold`, `font-black`) 적용.
+* **Icons:** Google Material Symbols Outlined (얇고 현대적인 느낌, `FILL 0`, `wght 400`).
+
+## 6. Interactions & Animations
+* **Scroll Reveal:** 페이지 스크롤 시 아래에서 위로 부드럽게 나타나는 효과 적용.
+    * `opacity: 0`, `transform: translateY(30px)` -> `opacity: 1`, `transform: translateY(0)`
+    * Cubic-bezier 곡선(`0.16, 1, 0.3, 1`)을 사용하여 고급스러운 가속/감속 표현.
+    * `delay-100`, `delay-200`, `delay-300` 클래스를 통한 시차(Stagger) 애니메이션.
+* **Hover States (마이크로 인터랙션):**
+    * 카드: 위로 살짝 떠오름 (`hover:-translate-y-1` or `-translate-y-2`) 및 그림자 강화.
+    * 버튼: 클릭 시 살짝 작아지는 효과 (`active:scale-95`).
+    * 아이콘: 호버 시 살짝 커지는 효과 (`group-hover:scale-110`).
+* **Background Elements:** 추상적인 기하학 도형에 매우 느린 회전(`animate-[spin_15s_linear_infinite]`)이나 흐림 효과(`blur-[120px]`)를 주어 백그라운드에 생기를 부여.
+
+## 7. Tailwind Setup Snippet
+```javascript
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#2b7cee",
+                "accent": "#2b7cee",
+                "background-base": "#E8EEE3",
+                "surface": "#FFFFFF",
+                "text-primary": "#1a1a1a",
+                "text-secondary": "rgba(26, 26, 26, 0.6)",
+                "cool-gray-50": "#F8FAFC"
+            },
+            fontFamily: {
+                "display": ["'Noto Sans KR'", "sans-serif"],
+                "num": ["'Inter'", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.75rem",
+                "lg": "0.75rem",
+                "xl": "0.75rem",
+                "2xl": "1rem"
+            }
+        }
+    }
+}
