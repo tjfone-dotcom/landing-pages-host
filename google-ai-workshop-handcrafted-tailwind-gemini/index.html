@@ -346,6 +346,19 @@
     </script>
     <script>
         (function () {
+            function refreshAnimations() {
+                if (!window.AOS) return;
+
+                if (typeof window.AOS.refreshHard === 'function') {
+                    window.AOS.refreshHard();
+                    return;
+                }
+
+                if (typeof window.AOS.refresh === 'function') {
+                    window.AOS.refresh();
+                }
+            }
+
             function navigateTop(url) {
                 try {
                     window.parent.postMessage({
@@ -384,15 +397,27 @@
                 }, '*');
             }
 
-            function schedulePosts() {
+            function syncLayout() {
+                postHeight();
+                refreshAnimations();
+            }
+
+            function scheduleLayoutSync() {
                 [0, 200, 600, 1200].forEach(function (delay) {
-                    window.setTimeout(postHeight, delay);
+                    window.setTimeout(syncLayout, delay);
                 });
             }
 
-            document.addEventListener('DOMContentLoaded', schedulePosts);
-            window.addEventListener('load', schedulePosts);
-            window.addEventListener('resize', postHeight);
+            document.addEventListener('DOMContentLoaded', scheduleLayoutSync);
+            window.addEventListener('load', scheduleLayoutSync);
+            window.addEventListener('resize', scheduleLayoutSync);
+            window.addEventListener('orientationchange', scheduleLayoutSync);
+            window.addEventListener('pageshow', scheduleLayoutSync);
+
+            if (document.fonts && typeof document.fonts.ready === 'object') {
+                document.fonts.ready.then(scheduleLayoutSync);
+            }
+
             document.addEventListener('click', function (event) {
                 var link = event.target.closest('a[data-top-navigation="true"]');
                 if (!link) return;
@@ -400,7 +425,7 @@
                 navigateTop(link.href);
             });
 
-            schedulePosts();
+            scheduleLayoutSync();
         })();
     </script>
 </body>
