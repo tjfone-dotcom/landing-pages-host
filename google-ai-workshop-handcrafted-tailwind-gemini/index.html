@@ -344,5 +344,40 @@
             anchorPlacement: 'top-bottom'
         });
     </script>
+    <script>
+        (function () {
+            function getHeight() {
+                var body = document.body;
+                var doc = document.documentElement;
+                return Math.max(
+                    body ? body.scrollHeight : 0,
+                    body ? body.offsetHeight : 0,
+                    body ? body.clientHeight : 0,
+                    doc ? doc.scrollHeight : 0,
+                    doc ? doc.offsetHeight : 0,
+                    doc ? doc.clientHeight : 0
+                );
+            }
+
+            function postHeight() {
+                window.parent.postMessage({
+                    type: 'landing-height',
+                    height: getHeight()
+                }, '*');
+            }
+
+            function schedulePosts() {
+                [0, 200, 600, 1200].forEach(function (delay) {
+                    window.setTimeout(postHeight, delay);
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', schedulePosts);
+            window.addEventListener('load', schedulePosts);
+            window.addEventListener('resize', postHeight);
+
+            schedulePosts();
+        })();
+    </script>
 </body>
 </html>
